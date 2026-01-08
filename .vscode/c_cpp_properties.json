@@ -1,0 +1,28 @@
+{
+	"configurations": [
+		{
+			"name": "BuildToSurviveEditor Editor Linux Development (BuildToSurvive)",
+			"compilerPath": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"compilerArgs": [
+				"-isysroot",
+				"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu"
+			],
+			"cStandard": "c17",
+			"cppStandard": "c++20",
+			"intelliSenseMode": "clang-x64",
+			"compileCommands": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive.json"
+		},
+		{
+			"name": "Linux",
+			"compilerPath": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"compilerArgs": [
+				"-isysroot",
+				"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu"
+			],
+			"cStandard": "c17",
+			"cppStandard": "c++20",
+			"intelliSenseMode": "clang-x64",
+			"compileCommands": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_Default.json"
+		}
+	]
+}

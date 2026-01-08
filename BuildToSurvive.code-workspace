@@ -1,0 +1,1656 @@
+{
+	"folders": [
+		{
+			"name": "BuildToSurvive",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"terminal.integrated.env.linux": {
+			"PATH": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+			"DOTNET_ROOT": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+			"DOTNET_HOST_PATH": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+			"DOTNET_MULTILEVEL_LOOKUP": "0",
+			"DOTNET_ROLL_FORWARD": "LatestMajor"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "BuildToSurvive Android Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"Debug",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Debug Cook+Deploy",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=Debug",
+					"-ServerConfig=Debug",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"BuildToSurviveEditor Linux Development Build",
+					"BuildToSurvive Android Debug Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Debug Cook",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=Debug",
+					"-ServerConfig=Debug",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook"
+				],
+				"dependsOn": [
+					"BuildToSurviveEditor Linux Development Build",
+					"BuildToSurvive Android Debug Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Debug Deploy",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=Debug",
+					"-ServerConfig=Debug",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-DeploySoToDevice",
+					"-SkipCook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"BuildToSurvive Android Debug Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"Debug",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive Android Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"Debug",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"DebugGame",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android DebugGame Cook+Deploy",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=DebugGame",
+					"-ServerConfig=DebugGame",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"BuildToSurviveEditor Linux Development Build",
+					"BuildToSurvive Android DebugGame Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android DebugGame Cook",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=DebugGame",
+					"-ServerConfig=DebugGame",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook"
+				],
+				"dependsOn": [
+					"BuildToSurviveEditor Linux Development Build",
+					"BuildToSurvive Android DebugGame Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android DebugGame Deploy",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=DebugGame",
+					"-ServerConfig=DebugGame",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-DeploySoToDevice",
+					"-SkipCook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"BuildToSurvive Android DebugGame Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"DebugGame",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive Android DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"DebugGame",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"Development",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Development Cook+Deploy",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=Development",
+					"-ServerConfig=Development",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"BuildToSurviveEditor Linux Development Build",
+					"BuildToSurvive Android Development Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Development Cook",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=Development",
+					"-ServerConfig=Development",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook"
+				],
+				"dependsOn": [
+					"BuildToSurviveEditor Linux Development Build",
+					"BuildToSurvive Android Development Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Development Deploy",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=Development",
+					"-ServerConfig=Development",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-DeploySoToDevice",
+					"-SkipCook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"BuildToSurvive Android Development Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"Development",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive Android Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"Development",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"Test",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Test Cook+Deploy",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=Test",
+					"-ServerConfig=Test",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"BuildToSurviveEditor Linux Development Build",
+					"BuildToSurvive Android Test Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Test Cook",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=Test",
+					"-ServerConfig=Test",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook"
+				],
+				"dependsOn": [
+					"BuildToSurviveEditor Linux Development Build",
+					"BuildToSurvive Android Test Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Test Deploy",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=Test",
+					"-ServerConfig=Test",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-DeploySoToDevice",
+					"-SkipCook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"BuildToSurvive Android Test Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"Test",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive Android Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"Test",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"Shipping",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Shipping Cook+Deploy",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=Shipping",
+					"-ServerConfig=Shipping",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"BuildToSurviveEditor Linux Development Build",
+					"BuildToSurvive Android Shipping Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Shipping Cook",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=Shipping",
+					"-ServerConfig=Shipping",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-Cook"
+				],
+				"dependsOn": [
+					"BuildToSurviveEditor Linux Development Build",
+					"BuildToSurvive Android Shipping Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Shipping Deploy",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/RunUAT.sh",
+				"args": [
+					"BuildCookRun",
+					"-ScriptsForProject=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-Project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-noP4",
+					"-ClientConfig=Shipping",
+					"-ServerConfig=Shipping",
+					"-NoCompileEditor",
+					"-utf8output",
+					"-Platform=Android",
+					"-TargetPlatform=Android",
+					"-ini:Game:[/Script/UnrealEd.ProjectPackagingSettings]:BlueprintNativizationMethod=Disabled",
+					"-Compressed",
+					"-IterativeCooking",
+					"-IterativeDeploy",
+					"-DeploySoToDevice",
+					"-SkipCook",
+					"-Stage",
+					"-Deploy"
+				],
+				"dependsOn": [
+					"BuildToSurvive Android Shipping Build"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"Shipping",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive Android Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Android Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Android",
+					"Shipping",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"Debug",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"Debug",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"Debug",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"DebugGame",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"DebugGame",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"DebugGame",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"Development",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"Development",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"Development",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"Test",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"Test",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive Linux Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"Test",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"Shipping",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"Shipping",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive Linux Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive Linux Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"Linux",
+					"Shipping",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"Debug",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"Debug",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive LinuxArm64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"Debug",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive LinuxArm64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"Development",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"Development",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive LinuxArm64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"Development",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"Test",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"Test",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive LinuxArm64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"Test",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"Shipping",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"Shipping",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurvive LinuxArm64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurvive LinuxArm64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurvive",
+					"LinuxArm64",
+					"Shipping",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurviveEditor Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurviveEditor",
+					"Linux",
+					"Debug",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurviveEditor Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurviveEditor",
+					"Linux",
+					"Debug",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurviveEditor Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurviveEditor Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurviveEditor",
+					"Linux",
+					"Debug",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurviveEditor Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurviveEditor",
+					"Linux",
+					"DebugGame",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurviveEditor Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurviveEditor",
+					"Linux",
+					"DebugGame",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurviveEditor Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurviveEditor Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurviveEditor",
+					"Linux",
+					"DebugGame",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurviveEditor Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurviveEditor",
+					"Linux",
+					"Development",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurviveEditor Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurviveEditor",
+					"Linux",
+					"Development",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BuildToSurviveEditor Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"label": "BuildToSurviveEditor Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"BuildToSurviveEditor",
+					"Linux",
+					"Development",
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch BuildToSurvive (Debug)",
+				"request": "launch",
+				"program": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Binaries/Linux/UnrealGame-Linux-Debug",
+				"preLaunchTask": "BuildToSurvive Linux Debug Build",
+				"args": [
+				],
+				"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/BuildToSurvive": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive",
+					"/UEVFS/Root": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"name": "Launch BuildToSurvive (DebugGame)",
+				"request": "launch",
+				"program": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Binaries/Linux/UnrealGame-Linux-DebugGame",
+				"preLaunchTask": "BuildToSurvive Linux DebugGame Build",
+				"args": [
+				],
+				"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/BuildToSurvive": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive",
+					"/UEVFS/Root": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"name": "Launch BuildToSurvive (Development)",
+				"request": "launch",
+				"program": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Binaries/Linux/UnrealGame",
+				"preLaunchTask": "BuildToSurvive Linux Development Build",
+				"args": [
+				],
+				"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/BuildToSurvive": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive",
+					"/UEVFS/Root": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"name": "Launch BuildToSurvive (Test)",
+				"request": "launch",
+				"program": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Binaries/Linux/UnrealGame-Linux-Test",
+				"preLaunchTask": "BuildToSurvive Linux Test Build",
+				"args": [
+				],
+				"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/BuildToSurvive": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive",
+					"/UEVFS/Root": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"name": "Launch BuildToSurvive (Shipping)",
+				"request": "launch",
+				"program": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Binaries/Linux/UnrealGame-Linux-Shipping",
+				"preLaunchTask": "BuildToSurvive Linux Shipping Build",
+				"args": [
+				],
+				"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/BuildToSurvive": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive",
+					"/UEVFS/Root": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"name": "Launch BuildToSurviveEditor (Debug)",
+				"request": "launch",
+				"program": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+				"preLaunchTask": "BuildToSurviveEditor Linux Debug Build",
+				"args": [
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject"
+				],
+				"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/BuildToSurvive": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive",
+					"/UEVFS/Root": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"name": "Launch BuildToSurviveEditor (DebugGame)",
+				"request": "launch",
+				"program": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+				"preLaunchTask": "BuildToSurviveEditor Linux DebugGame Build",
+				"args": [
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject"
+				],
+				"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/BuildToSurvive": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive",
+					"/UEVFS/Root": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"name": "Launch BuildToSurviveEditor (Development)",
+				"request": "launch",
+				"program": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Binaries/Linux/UnrealEditor",
+				"preLaunchTask": "BuildToSurviveEditor Linux Development Build",
+				"args": [
+					"/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject"
+				],
+				"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true,
+				"sourceFileMap": {
+					"/UEVFS/BuildToSurvive": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive",
+					"/UEVFS/Root": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Linux Development Build",
+				"program": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/home/goatzy/Documents/Unreal Projects/BuildToSurvive/BuildToSurvive.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"env": {
+					"PATH": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+					"DOTNET_ROOT": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+					"DOTNET_HOST_PATH": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+					"DOTNET_MULTILEVEL_LOOKUP": "0",
+					"DOTNET_ROLL_FORWARD": "LatestMajor"
+				},
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1"
+			}
+		]
+	}
+}

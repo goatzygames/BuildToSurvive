@@ -1,0 +1,362 @@
+[
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/BuildToSurvive.Build.cs",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/BuildToSurvive.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/BuildToSurvive.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/BuildToSurviveCameraManager.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/BuildToSurviveCameraManager.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/BuildToSurviveCharacter.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/BuildToSurviveCharacter.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/BuildToSurviveGameMode.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/BuildToSurviveGameMode.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/BuildToSurvivePlayerController.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/BuildToSurvivePlayerController.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Horror/HorrorCharacter.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Horror/HorrorCharacter.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Horror/HorrorGameMode.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Horror/HorrorGameMode.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Horror/HorrorPlayerController.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Horror/HorrorPlayerController.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Horror/UI/HorrorUI.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Horror/UI/HorrorUI.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/AI/EnvQueryContext_Target.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/AI/EnvQueryContext_Target.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/AI/ShooterAIController.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/AI/ShooterAIController.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/AI/ShooterNPC.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/AI/ShooterNPC.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/AI/ShooterStateTreeUtility.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/AI/ShooterStateTreeUtility.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/ShooterCharacter.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/ShooterCharacter.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/ShooterGameMode.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/ShooterGameMode.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/ShooterPlayerController.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/ShooterPlayerController.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/UI/ShooterBulletCounterUI.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/UI/ShooterBulletCounterUI.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/UI/ShooterUI.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/UI/ShooterUI.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/Weapons/ShooterPickup.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/Weapons/ShooterPickup.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/Weapons/ShooterProjectile.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/Weapons/ShooterProjectile.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/Weapons/ShooterWeapon.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/Weapons/ShooterWeapon.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/Weapons/ShooterWeaponHolder.cpp",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	},
+	{
+		"file": "/home/goatzy/Documents/Unreal Projects/BuildToSurvive/Source/BuildToSurvive/Variant_Shooter/Weapons/ShooterWeaponHolder.h",
+		"arguments": [
+			"/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Extras/ThirdPartyNotUE/SDKs/HostLinux/Linux_x64/v25_clang-18.1.0-rockylinux8/x86_64-unknown-linux-gnu/bin/clang++",
+			"@/home/goatzy/Documents/Unreal Projects/BuildToSurvive/.vscode/compileCommands_BuildToSurvive/BuildToSurvive.1.rsp"
+		],
+		"directory": "/home/goatzy/Documents/UnrealEngine-5.6/Engine/Unreal_5.6.1/Engine/Source"
+	}
+]
