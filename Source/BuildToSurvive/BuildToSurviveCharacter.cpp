@@ -200,7 +200,7 @@ void ABuildToSurviveCharacter::CallFunctionByNameOnObject(UObject* Object, const
 		Object->ProcessEvent(Func, nullptr); 
 }
 
-void ABuildToSurviveCharacter::RefreshHotbarFunction()
+void ABuildToSurviveCharacter::RefreshHotbarFunction_Implementation()
 {
 	
 }

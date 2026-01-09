@@ -113,7 +113,7 @@ public:
 	
 	// Inventory stuff
 	
-	UFUNCTION(BlueprintCallable, Category="Inventory")
+	UFUNCTION(BlueprintNativeEvent, Category="Inventory")
 	void RefreshHotbarFunction();
 	
 	UFUNCTION(BlueprintCallable, Category="Inventory")
